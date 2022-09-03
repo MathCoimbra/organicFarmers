@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Organic Farmers</string>
+    <string name="carrinho_de">Carrinho de compras</string>
+    <string name="finalizar_c">Finalizar compra</string>
 </resources>
