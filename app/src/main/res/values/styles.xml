@@ -22,4 +22,13 @@
         </item>
 
     </style>
+
+    <style name="organicFarmersTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+    
+    <style name="organicFarmersTabLayoutTextAppearance" parent="Base.Widget.Design.TabLayout">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+    </style>
 </resources>

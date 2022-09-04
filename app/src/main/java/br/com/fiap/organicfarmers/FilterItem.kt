@@ -1,4 +1,4 @@
-package co.tiagoaguiar.tutorial.myfood
+package br.com.fiap.organicfarmers
 
 import android.content.Context
 import android.view.ContextThemeWrapper
@@ -10,36 +10,19 @@ data class FilterItem(
   val id: Int,
   val text: String,
   @DrawableRes val icon: Int? = null,
-  val iconSize: Float = 32.0f,
   @DrawableRes val closeIcon: Int? = null,
+
 )
 
-fun FilterItem.toChip(context: Context) : Chip {
-  val chip = if (closeIcon == null) {
-    LayoutInflater.from(context).inflate(R.layout.chip_choice, null, false) as Chip
-  } else {
-    Chip(ContextThemeWrapper(context, R.style.Widget_MaterialComponents_Chip_Choice))
-  }
+fun FilterItem.toChip(context: Context): Chip {
 
-  if (closeIcon != null)
-    chip.setChipBackgroundColorResource(R.color.white)
+  val chip = LayoutInflater.from(context).inflate(R.layout.chip_choice, null, false) as Chip
 
-  chip.setChipStrokeColorResource(R.color.lt_gray)
+  if (closeIcon != null) chip.setChipBackgroundColorResource(R.color.white)
+
+  chip.setChipStrokeColorResource(R.color.gray)
 
   chip.chipStrokeWidth = 2f
-
-  if(icon != null) {
-    chip.chipIconSize = iconSize
-    chip.setChipIconResource(icon)
-    chip.chipStartPadding = 20f
-  } else {
-    chip.chipIcon = null
-  }
-
-  closeIcon?.let {
-    chip.setCloseIconResource(it)
-    chip.isCloseIconVisible = true
-  }
 
   chip.text = text
 
