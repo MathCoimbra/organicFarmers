@@ -32,8 +32,8 @@ class ProducersFragment : Fragment(R.layout.fragment_producers) {
     )
 
     category2Adapter.items = arrayListOf(
-      Category2(1, "https://th.bing.com/th/id/OIP.X7kD66VkGRH8TmXuvuovDQHaE8?pid=ImgDet&w=750&h=500&rs=1"),
-      Category2(2, "https://www.verbraucherzentrale.de/sites/default/files/styles/article_full_image_desktop/public/2017-11/obst_gemuese_gpointstudio_fotolia.jpg?h=871ba2d0&itok=mT0x61Vx")
+      Category2(1, "https://th.bing.com/th/id/OIP.X7kD66VkGRH8TmXuvuovDQHaE8?pid=ImgDet&w=750&h=500&rs=1", "Cestas de orgânicos"),
+      Category2(2, "https://www.verbraucherzentrale.de/sites/default/files/styles/article_full_image_desktop/public/2017-11/obst_gemuese_gpointstudio_fotolia.jpg?h=871ba2d0&itok=mT0x61Vx", "Orgânicos avulsos" )
     )
 
     binding = FragmentProducersBinding.bind(view)
