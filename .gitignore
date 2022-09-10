@@ -106,7 +106,7 @@ gen-external-apklibs
 *.ipr
 *~
 *.swp
-.idea/
+/.idea/
 
 # Android Patch
 
