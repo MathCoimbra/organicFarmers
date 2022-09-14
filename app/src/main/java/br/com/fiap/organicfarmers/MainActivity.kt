@@ -1,7 +1,9 @@
 package br.com.fiap.organicfarmers
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 
 class MainActivity : AppCompatActivity() {
@@ -14,6 +16,11 @@ class MainActivity : AppCompatActivity() {
 
         imageView.setImageResource(R.drawable.union)
 
-
     }
+
+     fun onClick(view: View) {
+         val intent = Intent(this, ProducerActivity::class.java)
+         startActivity(intent)
+     }
+
 }

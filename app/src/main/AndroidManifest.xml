@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="br.com.fiap.organicfarmers">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,6 +16,12 @@
         android:theme="@style/Theme.OrganicFarmers"
         tools:targetApi="31">
         <activity
+            android:name=".ProducerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CarrinhoActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -22,9 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
