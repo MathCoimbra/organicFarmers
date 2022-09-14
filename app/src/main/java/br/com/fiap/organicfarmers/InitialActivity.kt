@@ -6,11 +6,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 
-class MainActivity : AppCompatActivity() {
+class InitialActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_initial)
 
         val imageView = findViewById<ImageView>(R.id.imageView)
 
