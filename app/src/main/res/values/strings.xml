@@ -1,9 +1,19 @@
 <resources>
     <string name="app_name">Organic Farmers</string>
+    <string name="app_title">Produtos orgânicos ao seu alcance</string>
     <string name="producers">Produtores</string>
     <string name="fairs">Feiras</string>
     <string name="marketplaces">Mercados</string>
     <string name="cart">Carrinho</string>
     <string name="finalizar_c">Finalizar compra</string>
     <string name="categories">Categorias</string>
+    <string name="description">Nós entregamos produtos orgânicos frescos e de qualidade direto da horta para a sua casa!</string>
+    <string name="make_your_wish">Faça seu pedido!</string>
+    <string name="search">Pesquisar</string>
+    <string name="producer">Produtor</string>
+    <string name="producer_logo">Logo do Produtor</string>
+    <string name="baskets_options">Opções de cestas</string>
+    <string name="product_title">Itens avulsos</string>
+    <string name="fruits">Frutas</string>
+
 </resources>

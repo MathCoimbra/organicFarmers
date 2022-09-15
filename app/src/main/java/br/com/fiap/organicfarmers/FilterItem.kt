@@ -20,7 +20,7 @@ fun FilterItem.toChip(context: Context): Chip {
 
   if (closeIcon != null) chip.setChipBackgroundColorResource(R.color.white)
 
-  chip.setChipStrokeColorResource(R.color.gray)
+  chip.setChipStrokeColorResource(R.color.grey)
 
   chip.chipStrokeWidth = 2f
 

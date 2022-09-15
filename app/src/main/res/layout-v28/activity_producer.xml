@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProducerActivity">
+
+    <ImageView
+        android:id="@+id/produce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/producer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/producer"
+        android:adjustViewBounds="true"
+        />
+
+    <ImageView
+        android:id="@+id/produce_logo"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="-32dp"
+        android:contentDescription="@string/producer_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/produce"
+        app:srcCompat="@drawable/producer_logo"
+        />
+
+    <LinearLayout
+        android:id="@+id/produce_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/produce_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        >
+
+        <TextView
+            android:id="@+id/produce_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:textFontWeight="500"
+            android:lineHeight="15dp"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/produce_street"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textFontWeight="400"
+            android:lineHeight="12dp"
+            android:textSize="12sp"
+            android:textColor="@color/grey"
+        />
+
+        <TextView
+            android:id="@+id/produce_city"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textFontWeight="400"
+            android:lineHeight="12dp"
+            android:textSize="12sp"
+            android:textColor="@color/grey"
+            />
+
+        <TextView
+            android:id="@+id/produce_phone"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textFontWeight="400"
+            android:lineHeight="12dp"
+            android:textSize="12sp"
+            android:textColor="@color/grey"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/baskets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/produce_info"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="24dp"
+        >
+
+        <TextView
+            android:id="@+id/basketTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:lineHeight="17sp"
+            android:text="@string/baskets_options"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+
+            />
+
+            <FrameLayout
+                android:id="@+id/container_root_basket"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/product_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/baskets"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="24dp"
+        >
+
+        <TextView
+            android:id="@+id/product_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:lineHeight="17sp"
+            android:text="@string/product_title"
+            android:textSize="16sp"
+            android:textColor="@color/black" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="270dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/container_root_product_fruits"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content" />
+
+
+                <FrameLayout
+                    android:id="@+id/container_root_product_greens"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"/>
+
+
+
+                <FrameLayout
+                    android:id="@+id/container_root_product_greenstuff"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
