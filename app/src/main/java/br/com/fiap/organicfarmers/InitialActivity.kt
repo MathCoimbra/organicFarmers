@@ -19,7 +19,7 @@ class InitialActivity : AppCompatActivity() {
     }
 
      fun onClick(view: View) {
-         val intent = Intent(this, ProducerActivity::class.java)
+         val intent = Intent(this, MainActivity::class.java)
          startActivity(intent)
      }
 

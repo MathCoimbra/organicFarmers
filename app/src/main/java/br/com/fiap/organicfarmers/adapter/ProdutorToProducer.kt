@@ -25,11 +25,18 @@ class ProdutorToProducer {
                 )
             }
 
+
             val products = produtor.produtos.map {
+
+                var theAmount = "0"
+                if (it.estoqueDisponivel.size != 0) {
+                    theAmount = it.estoqueDisponivel[0].qtdDisponivel.toString()
+                }
                 Product(name = it.nome,
                     price = "R$"+ it.preco.toString(),
                     urlImg = it.url,
-                    theAmount = it.estoqueDisponivel[0].qtdDisponivel.toString() + " unidade",
+                    theAmount = theAmount + " unidade",
+                    category = it.categoria
                 )
             }
 

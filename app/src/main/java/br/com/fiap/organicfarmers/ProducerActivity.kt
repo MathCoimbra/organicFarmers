@@ -8,6 +8,7 @@ import android.widget.Toast
 import br.com.fiap.organicfarmers.adapter.ProdutorToProducer
 import br.com.fiap.organicfarmers.dtos.Produtor
 import br.com.fiap.organicfarmers.factory.ProducerFactory
+import br.com.fiap.organicfarmers.modal.Product
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -38,9 +39,11 @@ class ProducerActivity : AppCompatActivity() {
                         supportFragmentManager
                             .beginTransaction()
                             .add(R.id.container_root_basket, ListBasketFragment.newInstance(producer.baskets), "ListBasket")
-                            .add(R.id.container_root_product_fruits, ListProductCategoryFragment.newInstance(producer.products, "Frutas"), "ListProductCategoryFruits")
-                            .add(R.id.container_root_product_greens, ListProductCategoryFragment.newInstance(producer.products, "Verduras"), "ListProductCategoryGreens")
-                            .add(R.id.container_root_product_greenstuff, ListProductCategoryFragment.newInstance(producer.products, "Legumes"), "ListProductCategoryGreenstuff")
+                            .add(R.id.container_root_product_fruits, ListProductCategoryFragment.newInstance(
+                                producer.products.filter{ s -> s.category?.lowercase() == "frutas" } as ArrayList<Product>, "Frutas"), "ListProductCategoryFruits")
+                            .add(R.id.container_root_product_greens, ListProductCategoryFragment.newInstance(
+                                producer.products.filter{ s -> s.category?.lowercase() == "verduras" } as ArrayList<Product>, "Verduras"), "ListProductCategoryGreens")
+                            .add(R.id.container_root_product_greenstuff, ListProductCategoryFragment.newInstance(producer.products.filter{ s -> s.category?.lowercase() == "legumes" } as ArrayList<Product>, "Legumes"), "ListProductCategoryGreenstuff")
                             .commit()
                     } ?: Toast.makeText(
                         this@ProducerActivity,

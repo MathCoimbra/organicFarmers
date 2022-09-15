@@ -48,7 +48,7 @@
             android:id="@+id/line_4"
             android:layout_width="44dp"
             android:layout_height="1dp"
-            android:background="@drawable/line"
+            android:background="@drawable/line2"
             android:layout_marginHorizontal="22dp"
             />
 

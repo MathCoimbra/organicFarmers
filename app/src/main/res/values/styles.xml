@@ -22,4 +22,23 @@
         </item>
 
     </style>
+
+    <style name="organicFarmersTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+    
+    <style name="organicFarmersTabLayoutTextAppearance" parent="Base.Widget.Design.TabLayout">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="rounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15dp</item>
+    </style>
+
+    <style name="rounded_producer">
+        <item name="cornerSize">50%</item>
+    </style>
+
 </resources>
