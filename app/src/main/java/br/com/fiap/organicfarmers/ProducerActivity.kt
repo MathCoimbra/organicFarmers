@@ -1,8 +1,10 @@
 package br.com.fiap.organicfarmers
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import br.com.fiap.organicfarmers.adapter.ProdutorToProducer
@@ -63,6 +65,11 @@ class ProducerActivity : AppCompatActivity() {
                 }
             })
         }
+    }
+
+    fun onClickMainBtn(view: View) {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
 }

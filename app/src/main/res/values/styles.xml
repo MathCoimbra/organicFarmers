@@ -41,4 +41,8 @@
         <item name="cornerSize">50%</item>
     </style>
 
+    <style name="Button.White" parent="ThemeOverlay.AppCompat">
+        <item name="colorAccent">#ffffffff</item>
+    </style>
+
 </resources>

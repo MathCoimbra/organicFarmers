@@ -24,6 +24,22 @@ class MainActivity : AppCompatActivity() {
 
         setupViews()
 
+        binding.btnNav.setOnItemSelectedListener() { item ->
+            when(item.itemId) {
+                R.id.home -> {
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.cart -> {
+                    val intent = Intent(this, CartActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
+        }
+
         supportFragmentManager
             .setFragmentResultListener("producer-details", this) {
                     _, bundle ->

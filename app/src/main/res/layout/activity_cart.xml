@@ -15,11 +15,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-            <View
-                    android:id="@+id/back"
+            <Button
+                    android:id="@+id/btn_cart_back"
                     android:layout_width="32dp"
                     android:layout_height="26dp"
-                    android:background="@drawable/ic_baseline_arrow_back" />
+                    android:background="@drawable/ic_baseline_black_arrow_back"
+                    android:onClick="onClickCartBtn"/>
 
             <TextView
                     android:text="@string/cart"
