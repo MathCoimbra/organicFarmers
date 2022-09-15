@@ -1,6 +1,5 @@
-package br.com.fiap.organicfarmers
+package br.com.fiap.organicfarmers.utils
 
-import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding

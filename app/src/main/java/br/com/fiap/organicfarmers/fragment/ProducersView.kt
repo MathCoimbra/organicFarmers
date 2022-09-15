@@ -1,14 +1,13 @@
-package br.com.fiap.organicfarmers
+package br.com.fiap.organicfarmers.fragment
 
-import android.content.Intent
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
-import androidx.fragment.app.FragmentResultListener
+import br.com.fiap.organicfarmers.utils.ATViewHolder
 import br.com.fiap.organicfarmers.databinding.ProducersItemBinding
+import br.com.fiap.organicfarmers.dtos.ProducersDTO
 import com.squareup.picasso.Picasso
 
 
-class ProducersView(viewGroup: ViewGroup) : ATViewHolder<ProducersDTO, ProducersItemBinding> (ProducersItemBinding::inflate, viewGroup) {
+class ProducersView(viewGroup: ViewGroup) : ATViewHolder<ProducersDTO, ProducersItemBinding>(ProducersItemBinding::inflate, viewGroup) {
 
     override fun bind(item: ProducersDTO) {
         with(binding) {

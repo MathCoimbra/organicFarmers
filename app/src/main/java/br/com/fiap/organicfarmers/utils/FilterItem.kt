@@ -1,9 +1,9 @@
-package br.com.fiap.organicfarmers
+package br.com.fiap.organicfarmers.utils
 
 import android.content.Context
-import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import androidx.annotation.DrawableRes
+import br.com.fiap.organicfarmers.R
 import com.google.android.material.chip.Chip
 
 data class FilterItem(

@@ -1,24 +1,28 @@
-package br.com.fiap.organicfarmers
+package br.com.fiap.organicfarmers.fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentResultListener
 import androidx.recyclerview.widget.LinearLayoutManager
+import br.com.fiap.organicfarmers.*
 import br.com.fiap.organicfarmers.databinding.FragmentProducersBinding
+import br.com.fiap.organicfarmers.dtos.Category2DTO
+import br.com.fiap.organicfarmers.dtos.CategoryDTO
+import br.com.fiap.organicfarmers.dtos.ProducersDTO
+import br.com.fiap.organicfarmers.utils.ATAdapter
+import br.com.fiap.organicfarmers.utils.FilterItem
+import br.com.fiap.organicfarmers.utils.toChip
 
 class ProducersFragment: Fragment(R.layout.fragment_producers) {
 
   private lateinit var binding: FragmentProducersBinding
 
-  private val categoryAdapter = ATAdapter( { CategoryView(it)})
-  private val category2Adapter = ATAdapter( { Category2View(it)})
+  private val categoryAdapter = ATAdapter( { CategoryView(it) })
+  private val category2Adapter = ATAdapter( { Category2View(it) })
   private val producersAdapter = ATAdapter(
     viewHolder = { ProducersView(it) },
-    onItemClick = { producer -> parentFragmentManager.setFragmentResult("producer-details", bundleOf("open-activity" to true))
+    onItemClick = { _ -> parentFragmentManager.setFragmentResult("producer-details", bundleOf("open-activity" to true))
     }
   )
 
