@@ -22,7 +22,9 @@ class ProducerActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
 
-            val call = ProducerFactory().getProducerService().getProdutor("1")
+            val producerId = intent.getIntExtra("producerId", 0)
+
+            val call = ProducerFactory().getProducerService().getProdutor(producerId.toString())
 
             call.enqueue(object: Callback<Produtor>{
                 override fun onResponse(call: Call<Produtor>, response: Response<Produtor>) {

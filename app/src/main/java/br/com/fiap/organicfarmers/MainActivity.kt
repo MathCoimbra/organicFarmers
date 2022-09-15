@@ -43,10 +43,11 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager
             .setFragmentResultListener("producer-details", this) {
                     _, bundle ->
-                val result = bundle.getBoolean("open-activity")
+                val producerId = bundle.getInt("open-activity")
 
-                if (result) {
+                if (producerId != 0) {
                     val intent = Intent(this, ProducerActivity::class.java)
+                    intent.putExtra("producerId", producerId)
                     startActivity(intent)
                 }
         }

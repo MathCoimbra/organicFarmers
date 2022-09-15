@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.fiap.organicfarmers.modal.Product
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_list_product_category.view.*
 import kotlinx.android.synthetic.main.fragment_product_item.view.*
 import java.io.IOException
@@ -82,27 +83,9 @@ class ListProductCategoryFragment : Fragment {
             itemView.product_the_amount.text = product.theAmount
             itemView.product_price.text = product.price
 
-            object : AsyncTask<String?, Int?, Drawable?>() {
-                override fun doInBackground(vararg p0: String?): Drawable? {
-                    var bmp: Bitmap? = null
-                    try {
-                        val connection = URL(product.urlImg).openConnection() as HttpURLConnection
-                        connection.connect()
-                        val input: InputStream = connection.inputStream
-                        bmp = BitmapFactory.decodeStream(input)
-                    } catch (e: IOException) {
-                        e.printStackTrace()
-                    }
-                    return BitmapDrawable(bmp)
-                }
-
-                override fun onPostExecute(result: Drawable?) {
-
-                    itemView.product_img.setImageDrawable(result)
-                }
-
-            }.execute()
-
+            Picasso.get()
+                .load(product.urlImg)
+                .into(itemView.product_img)
 
         }
 

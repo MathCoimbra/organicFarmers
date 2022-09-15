@@ -18,7 +18,7 @@ class ProducersFragment: Fragment(R.layout.fragment_producers) {
   private val category2Adapter = ATAdapter( { Category2View(it)})
   private val producersAdapter = ATAdapter(
     viewHolder = { ProducersView(it) },
-    onItemClick = { producer -> parentFragmentManager.setFragmentResult("producer-details", bundleOf("open-activity" to true))
+    onItemClick = { producer -> parentFragmentManager.setFragmentResult("producer-details", bundleOf("open-activity" to producer.id))
     }
   )
 
@@ -45,8 +45,12 @@ class ProducersFragment: Fragment(R.layout.fragment_producers) {
     )
 
     producersAdapter.items = arrayListOf(
-      ProducersDTO(1, "https://ibassets.com.br/ib.store.image.medium/m-f2e96c63cb934a3b96dda16a078ac53b.jpeg", "Empório Nicoletti Orgânicos", "R. Dr. Presciliano Pinto, 228 - Boa Vista, São José do Rio Preto","(17) 99792-6076"),
-      ProducersDTO(2, "https://ibassets.com.br/ib.store.image.medium/m-f2e96c63cb934a3b96dda16a078ac53b.jpeg", "Empório Nicoletti Orgânicos", "R. Dr. Presciliano Pinto, 228 - Boa Vista, São José do Rio Preto", "(17) 99792-6076")
+      ProducersDTO(1, "https://ibassets.com.br/ib.store.image.medium/m-f2e96c63cb934a3b96dda16a078ac53b.jpeg", "Empório Victor Orgâniico", "Rua Joaquim Geraldo, 10 - Jardim América, Jardim América","(35)99935-4521"),
+      ProducersDTO(4, "https://ibassets.com.br/ib.store.image.medium/m-f2e96c63cb934a3b96dda16a078ac53b.jpeg", "Empório Raissa Orgânico", "Rua 21 de Setembro, 50 - Vila Robertina, São Paulo", "(11)99945-1248"),
+      ProducersDTO(5, "https://ibassets.com.br/ib.store.image.medium/m-f2e96c63cb934a3b96dda16a078ac53b.jpeg", "Empório Carlos Graos", "Rua 9 de Setembro, 15 - Chácara Gaivotas, São Paulo", "(11)99954-3578"),
+      ProducersDTO(6, "https://ibassets.com.br/ib.store.image.medium/m-f2e96c63cb934a3b96dda16a078ac53b.jpeg", "Empório Rafael Orgânico", "Rua Abaúna, 20 - Vila Moinho Velho, São Paulo", "(11)99548-2145"),
+      ProducersDTO(9, "https://ibassets.com.br/ib.store.image.medium/m-f2e96c63cb934a3b96dda16a078ac53b.jpeg", "Empório Matheus Verduras", "Rua Abdon Batista, 200 - Parque das Paineiras, São Paulo", "(11)99885-7545")
+
     )
 
     binding = FragmentProducersBinding.bind(view)
