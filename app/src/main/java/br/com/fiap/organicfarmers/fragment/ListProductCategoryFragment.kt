@@ -1,11 +1,6 @@
-package br.com.fiap.organicfarmers
+package br.com.fiap.organicfarmers.fragment
 
 import android.content.Context
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
-import android.os.AsyncTask
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,14 +8,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import br.com.fiap.organicfarmers.R
 import br.com.fiap.organicfarmers.modal.Product
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_list_product_category.view.*
 import kotlinx.android.synthetic.main.fragment_product_item.view.*
-import java.io.IOException
-import java.io.InputStream
-import java.net.HttpURLConnection
-import java.net.URL
 
 
 class ListProductCategoryFragment : Fragment {

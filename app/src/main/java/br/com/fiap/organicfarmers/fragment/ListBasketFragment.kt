@@ -1,4 +1,4 @@
-package br.com.fiap.organicfarmers
+package br.com.fiap.organicfarmers.fragment
 
 import android.content.Context
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import br.com.fiap.organicfarmers.R
 import br.com.fiap.organicfarmers.modal.Basket
 import kotlinx.android.synthetic.main.fragment_list_basket.view.*
 import kotlinx.android.synthetic.main.fragment_basket_item.view.*

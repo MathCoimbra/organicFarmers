@@ -10,6 +10,8 @@ import android.widget.Toast
 import br.com.fiap.organicfarmers.adapter.ProdutorToProducer
 import br.com.fiap.organicfarmers.dtos.Produtor
 import br.com.fiap.organicfarmers.factory.ProducerFactory
+import br.com.fiap.organicfarmers.fragment.ListBasketFragment
+import br.com.fiap.organicfarmers.fragment.ListProductCategoryFragment
 import br.com.fiap.organicfarmers.modal.Product
 import retrofit2.Call
 import retrofit2.Callback

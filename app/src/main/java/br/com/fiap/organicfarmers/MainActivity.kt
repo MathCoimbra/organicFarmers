@@ -3,11 +3,11 @@ package br.com.fiap.organicfarmers
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import br.com.fiap.organicfarmers.databinding.ActivityMainBinding
+import br.com.fiap.organicfarmers.fragment.ProducersFragment
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {

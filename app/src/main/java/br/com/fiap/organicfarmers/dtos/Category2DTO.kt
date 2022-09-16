@@ -1,4 +1,4 @@
-package br.com.fiap.organicfarmers
+package br.com.fiap.organicfarmers.dtos
 
 data class Category2DTO(
     val id: Int,

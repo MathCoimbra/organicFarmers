@@ -1,4 +1,4 @@
-package br.com.fiap.organicfarmers
+package br.com.fiap.organicfarmers.utils
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
